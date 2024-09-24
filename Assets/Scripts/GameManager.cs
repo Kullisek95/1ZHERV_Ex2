@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         if (sGameStarted && !mGameLost)
         {
             // Increment the score by elapsed time.
-            mCurrentScore += Time.deltaTime;
+            mCurrentScore += Time.deltaTime * 5;
             // Update the score text.
             GetChildNamed(scoreText, "Value").GetComponent<Text>().text = $"{(int)(mCurrentScore)}";
         }
